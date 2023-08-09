@@ -1,6 +1,6 @@
 import streamlit
 
-streamlit.title('My Parents New Healthy Dinner')
+8.title('My Parents New Healthy Dinner')
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -41,7 +41,7 @@ my_data_row = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
-add_my_fruit = st.text_input('What fruit would you like to add?, '')
-st.write('Thanks for adding ', add_my_fruit)
+add_my_fruit = streamlit.text_input('What fruit would you like to add?, '')
+streamlit.write('Thanks for adding ', add_my_fruit)
 my_cur.execute("insert into pc_rivery_db.public.fruit_load_list (FRUIT_NAME) VALUES (" + add_my_fruit + ")";)                             
 
